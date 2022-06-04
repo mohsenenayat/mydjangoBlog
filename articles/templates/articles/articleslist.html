@@ -9,11 +9,13 @@
     <title>Articles List</title>
 </head>
 <body>
-    <h1>Articles List</h1>
-    {% for article in articles %}
-    <h2><a href="#">{{article.title}}</a></h2>
-    <p>{{article.kholase_matn}}</p>
-    <p>{{article.date}}</p>
-    {% endfor %}
+    <div class="container">
+        <h1>Articles List</h1>
+        {% for article in articles %}
+        <h2><a href="#">{{article.title}}</a></h2>
+        <p>{{article.kholase_matn}}</p>
+        <p>{{article.date}}</p>
+        {% endfor %}
+    </div>
 </body>
 </html>
