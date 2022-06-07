@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #bbb;
+    background-color: darkblue;
     color: #fff;
     font-family: 'roya';
     direction: rtl;
@@ -39,5 +39,5 @@ a {
 .wrapper {
     width: 960px;
     margin: 0 auto;
-    background-color: darkblue;
+    background-color: goldenrod;
 }
