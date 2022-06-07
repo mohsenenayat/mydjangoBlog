@@ -16,8 +16,14 @@ Including another URLconf
 # from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path, include
+
+from djangoBlog.settings import MEDIA_ROOT, MEDIA_URL
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
+from django.conf import Settings, settings
+
+
 app_name = "main"
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +32,4 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
