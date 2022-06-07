@@ -30,6 +30,7 @@ urlpatterns = [
     path('about/', views.about),
     path('', views.home, name="firstPage"),
     path('articles/', include('articles.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
