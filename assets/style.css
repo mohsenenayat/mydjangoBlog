@@ -6,10 +6,9 @@
 }
 
 body {
-    background-color: darkblue;
+    background-color: rgb(1, 1, 62);
     color: #fff;
     font-family: 'roya';
-    direction: rtl;
     font-size: 120%;
 }
 
@@ -34,10 +33,4 @@ p {
 
 a {
     color: #fff;
-}
-
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
-    background-color: goldenrod;
 }

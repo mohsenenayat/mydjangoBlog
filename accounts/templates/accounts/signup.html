@@ -1,13 +1,14 @@
 {%extends 'base.html'%}
 
 {%block title%}
-SignUp
+Signup
 {%endblock%}
 
 {%block content%}
-<form action="/accounts/signup" class="site_form" method="post">
+<h1>Signup</h1>
+<form action="{% url 'accounts:signup' %}" class="site_form" method="post">
     {{form}}
     {%csrf_token%}
-    <input type="submit" value="submit">
+    <input type="submit" value="signup">
 </form>
 {%endblock%}
