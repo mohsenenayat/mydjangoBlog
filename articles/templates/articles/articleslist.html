@@ -4,12 +4,15 @@
 Articles List
 {%endblock%}
 {%block content%}
-<div class="container">
-    <h1>لیست کتاب ها</h1>
+<h1>Articles List</h1>
+<div class="articles">
     {% for article in articles %}
-    <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
-    <p>{{article.kholase_matn}}</p>
-    <p>{{article.date}}</p>
+    <div class="article">
+        <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
+        <p class="text">{{article.kholase_matn}}</p>
+        <p class="text">{{article.date}}</p>
+        <p class="author">added by {{article.author.username}}</p>
+    </div>
     {% endfor %}
 </div>
 {%endblock%}

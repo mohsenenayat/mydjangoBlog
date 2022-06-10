@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css'%}"/>
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
     <title>
         {%block title%}
 
@@ -15,17 +15,25 @@
 </head>
 
 <body>
-    <h4><a href="{% url 'articles:list' %}">HOME</a></h4>
-    <nav>
-        <ul>
-            <li>
-                <form action="{%url 'accounts:logout'%}" class="logout-link" method="post">
-                    {%csrf_token%}
-                    <button type="submit">logout</button>
-                </form>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <h4><a href="{% url 'articles:list' %}">HOME</a></h4>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                <li>
+                    <form action="{%url 'accounts:logout'%}" class="logout-link" method="post">
+                        {%csrf_token%}
+                        <button type="submit">logout</button>
+                    </form>
+                </li>
+                <li><a href="{% url 'articles:create' %}">create new article</a></li>
+                {% else %}
+                <li><a href="{% url 'accounts:login' %}">login</a></li>
+                <li><a href="{% url 'accounts:signup' %}">signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
     <div class="wrapper">
 
         {%block content%}
