@@ -24,6 +24,9 @@ def create_article(request):
     if request.method == 'POST':
         form = forms.createArticle(request.POST, request.FILES)
         if form.is_valid():
+            test1 = form.save(commit=False)
+            test1.author = request.user
+            test1.save()
             redirect('articles:list')
     else:
         form = forms.createArticle()
