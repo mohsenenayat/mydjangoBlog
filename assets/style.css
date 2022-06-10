@@ -29,57 +29,68 @@ a:visited {
     color: #fff;
     text-decoration: none;
 }
-.wrapper{
+
+.wrapper {
     max-width: 960px;
     margin: 0 auto;
 }
-div.wrapper h1{
+
+div.wrapper h1 {
     text-align: center;
     margin: 100px auto;
     font-size: 2.4em;
 }
-header{
+
+header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 0;
 }
-nav li{
+
+nav li {
     display: inline-block;
     margin-left: 20px;
 }
-nav button{
+
+nav button {
     background: 0;
     color: #fff;
     border: 0;
     font-size: 1em;
     cursor: pointer;
 }
-.articles{
+
+.articles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
 }
-.article{
+
+.article {
     padding: 10px;
     border: 1px solid #00dba0;
     position: relative;
     padding-bottom: 40px;
 }
-.articles .article{
+
+.articles .article {
     width: 300px;
     overflow: hidden;
 }
-.article h2{
+
+.article h2 {
     font-size: 1.2em;
     text-align: center;
     border-bottom: 2px dashed #fff;
     padding-bottom: 10px;
 }
-.article p.text{
+
+.article p.text {
     width: 98%;
     word-wrap: break-word;
 }
-.article .author{
+
+.article .author {
     background-color: #00dba0;
     color: #0f121f;
     position: absolute;
@@ -88,30 +99,101 @@ nav button{
     bottom: 0;
     padding: 5px 10px;
 }
-.article-detail .article{
+
+.article-detail .article {
     padding: 0;
 }
-.article-detail .article img{
+
+.article-detail .article img {
     display: block;
     max-width: 98%;
     margin: 10px auto;
 }
-.article-detail .article h1{
+
+.article-detail .article h1 {
     text-align: center;
     margin: 30px auto;
 }
-.article-detail .article p{
+
+.article-detail .article p {
     text-align: center;
 }
-.article-detail .article p.body{
+
+.article-detail .article p.body {
     text-align: justify;
     max-width: 98%;
     margin: 0 auto;
     overflow: hidden;
     word-wrap: break-word;
 }
-.article-detail .article p.date{
+
+.article-detail .article p.date {
     color: coral;
     border-top: 2px dashed #fff;
     padding-top: 10px;
+}
+
+.site-form {
+    margin-top: 50px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+}
+
+.site-form input,
+.site-form textarea {
+    display: block;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+.site-form input{
+    width: 150px;
+    height: 20px;
+}
+
+a.highlight {
+    border: 1px solid #00dba0;
+    color: #00dba0;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.helptext,
+.helptext ul {
+    margin:0 5px 30px;
+    font-size: 0.9em;
+    color: #bbb;
+    display: block;
+}
+.helptext ul{
+    padding-left: 0;
+}
+br{
+    padding: 0;
+    height: 5px;
+}
+.errorlist li{
+    border: 1px solid #ff5722;
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    color: #ff5722;
+    border-radius: 4px;
+}
+.errorlist{
+    padding: 0;
+}
+.site-form input[type="submit"]{
+    margin: 15px 0;
+    padding: 5px 10px;
+    width: 100px;
+    height: 35px;
+    background: #00dba0;
+    border-radius: 4px;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 2px #0f121f;
+    cursor: pointer;
 }

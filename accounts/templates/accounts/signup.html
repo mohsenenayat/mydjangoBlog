@@ -6,7 +6,7 @@ Signup
 
 {%block content%}
 <h1>Signup</h1>
-<form action="{% url 'accounts:signup' %}" class="site_form" method="post">
+<form action="{% url 'accounts:signup' %}" class="site-form" method="post">
     {{form}}
     {%csrf_token%}
     <input type="submit" value="signup">
